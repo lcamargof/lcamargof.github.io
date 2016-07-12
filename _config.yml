@@ -1,0 +1,42 @@
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+
+# Site settings
+title: "justadevblog"
+description: Tu clasico blog de programación pero en lenguaje coloquial
+
+email: luiska1993@gmail.com
+#blog logo
+logo: "/assets/images/logo.jpg"
+# blog cover
+cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
+
+name: 'Luis Camargo'
+author: 'Luis Camargo'
+author_image: "/assets/images/author.jpg"
+
+paginate:	5
+
+url: "http://myblog.***.***" # the base hostname & protocol for your site
+baseurl: ""
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+# social icons and sharing options
+social:
+  - icon:	linkedin-square
+    url:	https://linkedin.com/in/lcamargof
+    desc: Conectate conmigo en LinkedIn
+    share_url: 
+    share_title: 
+    share_link:
+
+  - icon:	github
+    url:	https://github.com/lcamargof
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
