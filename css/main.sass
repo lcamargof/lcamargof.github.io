@@ -130,7 +130,7 @@ body
 
 .content
   width: 100%
-  max-width: 640px
+  max-width: 768px
   margin: 0 auto
   @include box-sizing(border-box)
   @include respond-to(800)
@@ -619,3 +619,7 @@ pre
     border: 0
     padding-right: 0
     padding-left: 0
+
+@media(max-width: 700px)
+  .hidden-xs
+    display: none
