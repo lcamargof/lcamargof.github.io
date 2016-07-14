@@ -4,14 +4,14 @@ title: About
 permalink: /about/
 ---
 
-A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme 
-[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](blog.base68.com).
+# Luis Camargo
+Soy un desarrollador web (y lo que venga) Full-Stack Venezolano dedicado cada día a aprender algo nuevo. 
+Actualmente cuento con 3 años de experiencia y me encuentro residenciado en Puebla - México.
 
-You can **download** the theme here:
-[https://github.com/dirkfabisch/mediator](https://github.com/dirkfabisch/mediator) 
+En el transcurso de los años me he dedicado a aprender varias tecnologías, desde la universidad con Java, en mi primer trabajo con PHP Laravel 4 y hoy en día con Nodejs Express y los diversos Frameworks que se encuentran actualmente.
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Es bien cómico, divertido o estresante como lo quieran llamar que en la época que nos encontramos no terminas de dominar un lenguaje u framework cuando ya el mundo anda como loco por el otro nuevo framework o un nuevo lenguaje popular (¿Se acuerdan del boom de Ruby on Rails?).
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+En fin, cree este blog para plasmar mis conocimientos actuales y mis travesias aprendiendo nuevos frameworks (Angular 2 y Electron esto es contigo), si gustan pues síganme el juego.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Si tienen alguna recomendación o quieren hablar conmigo sobre tutoria o tal vez un trabajo freelance (nice!), contactenme a traves de mi [correo](mailto:{{ site.email}}), al rato les respondo ;)

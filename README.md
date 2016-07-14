@@ -1,4 +1,11 @@
-mediator
+Justanotherdevblog
+=========
+
+A blog for tutorials in a street language for better understanding of the concepts
+
+At the end is just another dev blog
+
+<!-- mediator
 ========
 
 A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme
@@ -75,4 +82,4 @@ Licensing
 
 Contact
 -------
-I'd love to hear from you at [@dirkfabisch](https://twitter.com/dirkfabisch). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome.
+I'd love to hear from you at [@dirkfabisch](https://twitter.com/dirkfabisch). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome. -->
