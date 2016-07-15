@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Introducción a ECMAScript 6 Pt. 1"
+description: javascript, ecmascript 6, es6, tutorial, español, aprende, aprendiendo 
 date:   2016-07-14 00:00:00
 categories: javascript
 lang: es

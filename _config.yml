@@ -2,6 +2,8 @@
 gems:
   - jemoji
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Site settings
 title: "justadevblog"
@@ -25,7 +27,7 @@ author_image: "/assets/images/author.jpg"
 
 paginate:	5
 
-url: "/" # the base hostname & protocol for your site
+url: "https://lcamargof.github.io" # the base hostname & protocol for your site
 baseurl: ""
 
 #fill in disqus shortname to use disqus
