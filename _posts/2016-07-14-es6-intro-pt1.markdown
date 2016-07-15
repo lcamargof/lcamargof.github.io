@@ -8,6 +8,7 @@ lang: es
 ref: es6pt1
 <!-- tags: featured  -->
 image: /assets/article_images/es6intro1/es6photo.jpg
+image2: /assets/article_images/es6intro1/es6photo.jpg
 previewImage: /assets/article_images/es6intro1/preview.jpg
 ---
 Bueno, que mejor manera de comenzar el blog con un post base sobre javascript. 
