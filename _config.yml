@@ -5,7 +5,13 @@ gems:
 
 # Site settings
 title: "justadevblog"
-description: Tu clasico blog de programación pero en lenguaje coloquial
+description: 
+  es: Tu clasico blog de programación pero en lenguaje coloquial
+  en: Your classic developement blog but in a friendly language
+
+index:
+  es:
+  en: 'indexen.html'
 
 email: luiska1993@gmail.com
 #blog logo

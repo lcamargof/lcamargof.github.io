@@ -1,7 +1,7 @@
 ---
 layout: default
 ref: index
-lang: es
+lang: en
 ---
 
 <div class="teaserimage">
@@ -26,17 +26,6 @@ lang: es
         {% endif %}
       {% endfor %}
       <a href="/about/">About</a>
-      &nbsp;&nbsp;·&nbsp;&nbsp;
-
-      {% assign posts=paginator.posts | where:"ref", page.ref | sort: 'lang' %}
-      {% for post in posts %}
-        <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
-      {% endfor %}
-      
-      {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-      {% for page in pages %}
-        <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
-      {% endfor %}
     </div>
 </header>
 
@@ -94,16 +83,14 @@ lang: es
 
     <nav class="pagination" role="navigation">
       {% if paginator.next_page %}
-        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; {% if page.lang == "en"%} Older posts {% else %} Viejos {% endif %}</a>
+        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
       {% endif %}
-      <span class="page-number">
-       {% if page.lang == "en"%} Page {% else %} Página {% endif %}
-       {{ paginator.page }} {% if page.lang == "en"%} of {% else %} de {% endif %} {{ paginator.total_pages }}</span>
+      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
       {% if paginator.previous_page %}
         {% if paginator.page == 2 %}
-          <a class="older-posts" href="/">{% if page.lang == "en"%} Newer posts {% else %} Nuevos {% endif %} &rarr;</a>
+          <a class="older-posts" href="/">Newer posts &rarr;</a>
         {% else %}
-          <a class="older-posts" href="/page{{paginator.previous_page}}">{% if page.lang == "en"%} Newer posts {% else %} Nuevos {% endif %} &rarr;</a>
+          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
         {% endif %}
       {% endif %}
     </nav>

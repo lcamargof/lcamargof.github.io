@@ -1,20 +1,19 @@
 ---
 layout: post
-title:  "Introducción a ECMAScript 6 Pt. 1"
+title:  "Introduction to ECMAScript 6 Pt. 1"
 date:   2016-07-14 00:00:00
 categories: javascript
-lang: es
+lang: en
 ref: es6pt1
 <!-- tags: featured  -->
 image: /assets/article_images/es6intro1/es6photo.jpg
-previewImage: /assets/article_images/es6intro1/preview.jpg
 ---
-Bueno, que mejor manera de comenzar el blog con un post base sobre javascript. 
+Well, what's the best way to start the blog if not with a post about Javascript uh?
 
-Pero primero que todo, *__¿A que me refiero con ECMAScript 6?__*, en palabras simples, ECMAScript 6 (o ES6 para abreviar), es el nuevo estándar de Javascript (que en realidad ya tiene algo de tiempo, pero ya se esta utilizando actualmente) el cual nos trae una extensa lista de cambios y mejoras a lo que ya conocemos, tantos, que se merece más de un post, a continuación cubriré lo `"esencial"` y lo que utilizare mayormente en mis siguientes posts.
+First of all, *__What do I mean with ECMAScript 6?__*, to make it simple, ECMAScript 6 (es6 to make it short), is the new javascript standart (well, to tell you the truth is a little old by now, but it's the current "thing"), es6 brings a lot of optimizations and new features to what we already know, there are so many that this topic deserves more than a single post, in the following article I will cover the `"esential"` features about es6.
 
 <p style="text-align: center;"><image src="/assets/article_images/es6intro1/okay.jpg"></image></p>
-<center style="margin-top: -30px;">	<h2> Variables (var, let y const) </h2> </center>
+<center style="margin-top: -30px;">	<h2> Variables (var, let and const) </h2> </center>
 ____
 
 A pesar de seguir siendo *dinámicamente tipeado*, ES6 nos introduce una nueva forma de declarar variables aparte del ya conocido `var`, estos son *let* y *const*.
