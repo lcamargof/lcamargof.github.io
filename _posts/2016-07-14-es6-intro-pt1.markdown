@@ -53,3 +53,52 @@ c = 50; // TypeError: Assignment to constant variable.
 Como se puede apreciar en el ejemplo, la variable `b` declarada con **let** dentro del bloque `if` no es igual a la que fue declarada en el bloque exterior, a diferencia de la variable `a` declarada con **var** donde si son la misma. Con respecto a la variable `c` declarada con **const**, con esta pudimos reasignar su propiedad "test" sin ningún problema, pero al momento de tratar de volver a asignarla salto un error *(ugh)*.
 
 *__En conclusión__:* Javascript nos ofrece dos maneras eficientes y seguras de declarar variables, por lo cual no veo razón para seguir utilizando `var` de manera general, en mi caso, me inclino más a utilizar `const` para declarar módulos, utilidades, etc, en una variable que se que no volveré a asignar, mientras para el resto, utilizare `let` para prevenir errores de *Scope*, tipo... *oh la función x me cambio el valor de la variable! acabo de perder 2 horas buscando el error...*, hmm me suena familiar.
+
+<center style="margin-top: -30px;">	<h2>() => Funciones </h2> </center>
+___
+
+Ahora hasta una nueva y mejor manera de declarar funciones le agregaron a Javascript, *¿Que les parece? ¿Genial no?*
+
+Esta nueva forma de declarar funciones es con el operador **"fat arrow" =>**, de esta manera podemos reemplazar la clasica declaración de `function(param1, param2) {}` a esta declaración `(param1, param2) => {}`.
+
+Y no solo se trata de una manera más "limpia" de declarar **funciones anonimas** (si, este nuevo metodo solo es para funciones anonimas), si no que solventan un problema muy común y que seguramente les ha ocurrido... el valor del `this` se mantiene dentro de la función... 
+
+*¡Y aun hay más!* ahora hasta un valor por defecto le podemos dar a los parametros, leyeron bien, ¡valores por defecto!, pero bueno basta de charla y vayamos al código: 
+
+**Ejemplo 1:**
+
+{% highlight js linenos %}
+// función de un parametro y return implicito
+const myFunction = text => console.log(text);
+{% endhighlight %}
+
+Primero que todo veamos que estamos haciendo uso de la palabra reservada `const` para la declaración de la función, esto es debido a que no re-declarare esta variable en ningun bloque del código, pero bueno esto no es lo que veniamos a ver. Este nuevo tipo de declaración solo funciona para funciones **anonimas**, por eso hago uso de la constante `myFunction` para contener la función.
+
+Podemos observar que `text` es el parametro que recibe la función, pero... ¡no tiene parentesis!... así es, en este tipo de funciones **en el caso de que se envie un solo parametro no se requieren los parentesis**, asi es, y por si fuera poco, en caso de ser una función de una linea el `return` esta implicito, es decir, para Javascript estamos haciendo un `return console.log(text)` y no requerimos de las llaves tampoco, *¿mucho más limpio no les parece?*
+
+**Ejemplo 2:**
+
+{% highlight js linenos %}
+// Function anonima sin parametros
+console.log( () => 'Hola mundo!' ); // Hola mundo
+{% endhighlight %}
+
+Este es un caso muy similar el primer ejemplo, la diferencia es que no esperamos parametros para esta funcion, pero hay una mención muy importante que hacer, a diferencia de *CoffeeScript* (si lo utilizan o llegaron a usar), en caso de que la función no reciba parametros **es necesario colocar () antes del signo =>**, y bueno, el `console.log` mostrara *"hola"* debido a que la función retorna implicitamente debido a que es una linea *cool!*
+
+**Ejemplo 3:**
+
+{% highlight js linenos %}
+// Función con más de un parametro y parametro con valor por defecto
+const myFunctionTwo = (param1, param2 = 'test') => {
+	console.log(param1); // valor del param1
+
+	return param2; // test
+}
+
+/*
+Este console.log regresara:
+1. 'test' => Es el parametro por default de la función que regrese en el return
+2. 'hola' => Parametro enviado
+ */
+console.log(myFunctionTwo('hola'));
+{% endhighlight %}
