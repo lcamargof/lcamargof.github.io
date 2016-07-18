@@ -11,7 +11,7 @@ image: /assets/article_images/es6intro1/es6photo.jpg
 image2: /assets/article_images/es6intro1/es6photo.jpg
 previewImage: /assets/article_images/es6intro1/preview.jpg
 ---
-Bueno, que mejor manera de comenzar el blog con un post base sobre javascript. 
+Bueno, que mejor manera de comenzar el blog con un post base sobre Javascript y sus nuevas funcionalidades. 
 
 Pero primero que todo, *__¿A que me refiero con ECMAScript 6?__*, en palabras simples, ECMAScript 6 (o ES6 para abreviar), es el nuevo estándar de Javascript (que en realidad ya tiene algo de tiempo, pero ya se esta utilizando actualmente) el cual nos trae una extensa lista de cambios y mejoras a lo que ya conocemos, tantos, que se merece más de un post, a continuación cubriré lo `"esencial"` y lo que utilizare mayormente en mis siguientes posts.
 
@@ -83,7 +83,7 @@ Podemos observar que `text` es el parametro que recibe la función, pero... ¡no
 console.log( () => 'Hola mundo!' ); // Hola mundo
 {% endhighlight %}
 
-Este es un caso muy similar el primer ejemplo, la diferencia es que no esperamos parametros para esta funcion, pero hay una mención muy importante que hacer, a diferencia de *CoffeeScript* (si lo utilizan o llegaron a usar), en caso de que la función no reciba parametros **es necesario colocar () antes del signo =>**, y bueno, el `console.log` mostrara *"hola"* debido a que la función retorna implicitamente debido a que es una linea *cool!*
+Este es un caso muy similar el primer ejemplo, la diferencia es que no esperamos parametros para esta funcion, pero hay una mención muy importante que hacer, a diferencia de *CoffeeScript* (si lo utilizan o llegaron a usar), en caso de que la función no reciba parametros **es necesario colocar () antes del signo =>**, y bueno, el `console.log` mostrara *"hola"* debido a que la función retorna implicitamente debido a que es una linea, *cool!*
 
 **Ejemplo 3:**
 
@@ -102,3 +102,52 @@ Este console.log regresara:
  */
 console.log(myFunctionTwo('hola'));
 {% endhighlight %}
+
+En este ultimo ejemplo vemos el uso de los parámetros con valor por defecto, si han usado otro lenguaje como PHP es una función muy similar (gracias a dios que la agregaron), de tal manera que el `param2` de `myFunctionTwo` obtiene el valor *test* debido a que es el valor que le asignamos al momento de declarar la función, algo muy útil ya que le podemos decir *¡Adios!* a esos molestos "`param2 = param2 || 'test'`".
+
+También podemos observar que la función recibe más de un parámetro, por lo cual se requieren los `()` y cada parametro debe ser separado por `,`, bueno, lo mismo que toda la vida.
+
+*__En conclusión__:* Ahora hasta las funciones nos cambiaron, eso si, este nuevo operador `() => {}` es demasiado bueno en la vida, al solventar los problemas de *Scope* (que estoy seguro que más de uno declaro un *self* en algún lado del código) a parte de un código más limpio, eso si, estos son los cambios **basicos** de este apartado, todavía queda más que aportar que podremos ver en la parte 2 (¿O en la 3?).
+
+<center style="margin-top: -30px;">	<h2>Clases... ¡CLASES! </h2> </center>
+___
+
+<p style="text-align: center;"><image src="/assets/article_images/es6intro1/finally.jpg"></image></p>
+
+No tengo palabras para describir este cambio, solo... **CLASES!!!**, así es, díganle adiós al típico código que usábamos y llamábamos *"Clases"*, a ese revoltijo que tratábamos de verle sentido y aplicarle todos los estándares que conocíamos de aquel código que si soportaba clases... Pues, no se diga más, una de las mayores inclusiones de ECMAScript 6 con la palabra reservada `class` *¡Díganle hola a las Clases en Javascript!*
+
+{% highlight js linenos %}
+class Person {
+
+	// Class constructor
+	constructor(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	// Class method
+	greet() {
+		// Uso de `
+		return `Mi nombre es ${this.name}, tengo ${this.age} años...
+		¡Mucho gusto!`;
+	}
+}
+
+const person = new Person('Luis Camargo', 23); // No la volvera a reasignar
+
+console.log(person.greet()); // Mi nombre es Luis Camargo, tengo 23 años... \n ¡Mucho gusto!
+{% endhighlight %}
+
+Solo... solo miren esa belleza de código... *(okay ya basta)*
+
+Como podemos ver en el ejemplo, una clase se declara simplemente con el uso de la palabra reservada `class` seguido con el nombre de la clase (y hasta `extend` esta, si, podemos extender las clases al propio estilo OOP), la clase que declaremos puede contar con un `constructor` que recibirá los parámetros con los que instanciemos la clases y los metodos de la clase que se declaran como podemos apreciar `metodo(params...) {}` hora de decirle adiós a los prototypes que usábamos para estos métodos *wooooo!*
+
+No solo estoy mostrando en este ejemplo la declaración de una clase, si nos fijamos bien, hay una nueva forma de escribir strings utilizando \`string\`, esta forma de declarar string se llama *"Template Strings"* y nos permiten **interpolar variables** y declarar **string multi-lineas**, así es, como podemos apreciar en el ejemplo, tenemos un string de dos lineas sin necesidad de concatenar las lineas, muy útil cuando necesitemos escribir textos largos o html (*Yeah!*). La *interpolación de variables* se utiliza de la siguiente manera: `${variable}`, solo colocando eso dentro de un *Template String* mostrara el valor de la variable sin necesidad de operaciones extra.
+
+*__En conclusión__:* Mantengo la explicación de clases breve ya que podría escribir todo un post hablando de la maravilla de las clases pero quiero mantener esto corto y básico, la inclusión de la palabra reservada `class` es uno de los cambios más grandes de *ES6* y el que más nos hará cambiar nuestra manera de escribir código, lo bueno de esto, es que es una maravilla... Ya realmente no les puedo pedir más y lo de *Template Strings* ni se diga una muy agradable funcionalidad, sinceramente, bien hecho.
+
+___
+
+Con esto se termina la *introducción básica a ES6*, un tutorial bastante breve para que sea una lectura agradable sobre lo que son algunas de las nuevas funcionalidades de nuestro amado (o odiado) Javascript.
+
+Aunque... no todo es color de rosa, a pesar de que ya muchos navegadores lo soportan nativamente, hay algo que todos los programadores tememos llamado **USUARIOS**, no todos estos seres tienen la ultima versión de su navegador (y algunos utilizan Internet explorer *Ugh*), pero no teman, hay una solución llamada... [**Babel**](https://babeljs.io/), realmente quisiera hacer un Post solamente dedicado a esta librería que literalmente "Salva la patria", mientras, diríjanse a su página web y lean algo sobre el o pruébenlo, srsly, **háganlo**.
