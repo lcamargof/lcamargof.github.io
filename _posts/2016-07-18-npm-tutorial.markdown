@@ -2,7 +2,7 @@
 layout: post
 title:  "Introducción a NPM (Aka Node Package Manager)"
 description: npm, nodejs, introduccion, tutorial, español, aprende, aprendiendo npm 
-date:   2016-07-18 00:00:00
+date:   2016-07-18 05:00:00
 categories: javascript
 lang: es
 ref: intronpm

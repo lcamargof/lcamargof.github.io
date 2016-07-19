@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduction to ECMAScript 6 Pt. 1"
-date:   2016-07-14 00:00:00
+date:   2016-07-14 05:00:00
 categories: javascript
 lang: en
 ref: es6pt1
